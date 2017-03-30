@@ -1,0 +1,8 @@
+980nm ~ Value: 200
+470nm ~ Value: 139
+505nm ~ Value: 26
+520nm ~ Value: 30
+590nm ~ Value: 35
+630nm ~ OFF
+690nm ~ OFF
+White ~ OFF

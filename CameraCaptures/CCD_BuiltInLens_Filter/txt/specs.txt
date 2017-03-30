@@ -1,0 +1,6 @@
+Exposure 2.17ms
+Gain 0.00 dB
+15.8-16.0 fps
+1280*1024 RGB32
+
+Ximea + lens +filter

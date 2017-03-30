@@ -1,0 +1,8 @@
+m
+cmount =>for 1" filter @  50 degrees the backworking distance required is 1.9"
+		for 1/2 " filter @ 50 degrees the backworking distance required is 9.5 cm 
+		in that case, The projection line of the filter @ 50 degrees is 0.8 cm
+		
+	which is ok provided that the sensor horizontal dimention is < 0.8 cm
+	
+	Indicatively Ximea sensor is 6.9

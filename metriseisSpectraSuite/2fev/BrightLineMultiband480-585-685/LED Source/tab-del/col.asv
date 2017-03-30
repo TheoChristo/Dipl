@@ -1,0 +1,42 @@
+clc;
+clear all;
+
+for p=0:5:60
+%p=25;
+    
+    %open file-----------------------------------------------------
+    f=int2str(p);
+    file=strcat(f,'degTrans.txt');
+    titlezzz=strcat('BrightLineMultiband390-482-563-640 ~ ',f,' degrees');
+    loczzz= strcat('Transmission_',f,'_degrees.jpg');
+
+    %Import Data from file lines 273-3120 -------------------------
+    [Wavelength,Transmission] = importfile(file,273, 3120);
+
+    %Limiter-------------------------------------------------------
+    s=size(Wavelength,1);
+    for i= 1:s
+        if Transmission(i) > 100 Transmission(i)=100;
+        elseif Transmission(i) < 0 Transmission(i)=0;
+        end
+        
+    end  
+   
+   %Spline (Factor~~4.7736813277873103E-4) ------------------------
+   %[res,gof] = createFit1(Wavelength,Transmission);
+   [res,gof] = createFit1(Wavelength,Transmission);
+y = feval(res,1);
+figure;
+h=plot (Wavelength,y)
+
+%   h=plot(res);
+
+    axis([400 950 0 100])
+    title(titlezzz)
+    xlabel('Wavelength (nm)') % x-axis label
+    ylabel('Transmission %') % y-axis label
+%    saveas(h,loczzz)
+print('FillPageFigure','-djpg','-fillpage')
+
+
+end
